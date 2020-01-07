@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎使用</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <link rel="icon" href="img/bitbug_favicon.ico" type="image/x-icon">
+</head>
+<style>
+
+    #box{
+        width: 1000px;
+        height: 500px;
+        margin: 0 auto;
+        border: 1px solid lightgray;
+        background: url("img/bgImg02.png");
+        background-size: 1000px 500px;
+    }
+
+    input{
+        height: 40px;
+        margin-bottom: 20px;
+        width: 200px;
+        background-color: rgba(255,255,255,0.7);
+        border: 0px;
+    }
+    #submit,#Reg,#FeedBack{
+        height: 25px;
+        width: 60px;
+        /*margin-left: 40px;*/
+    }
+    #submit,#Reg{
+        margin-right: 20px;
+    }
+    form{
+        /*border: 1px solid lightgray;*/
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #box div{
+        margin-bottom: 40px;
+        /*line-height: 50px;*/
+        margin-top: 20px;
+    }
+
+    #box #head_Nav #nav_Img{
+        width: 50px;
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+
+    #box #bgImg{
+        height: 300px;
+        float: left;
+        margin-right: 80px;
+        margin-left: 20px;
+    }
+
+    #box #head_Nav #sp1{
+        display: block;
+        margin-left: 85px;
+        margin-top: -40px;
+    }
+
+    #box #head_Nav #sp2{
+        display: block;
+        margin-left: 100px;
+        margin-top: -40px;
+        /*color: hotpink;*/
+    }
+
+</style>
+<body>
+
+    <div id="box">
+        <div id="head_Nav">
+            <img src="img/web.png" id="nav_Img">&nbsp;&nbsp;<span id="sp1">·</span>&nbsp;&nbsp;
+            <span id="sp2">用户名密码登录</span>
+        </div>
+
+<!--        <img src="img/bgImg.jpg" id="bgImg"/>-->
+
+        <form action="login.php" method="post">
+<!--            用户名、密码、手机号必填-->
+            用户名：
+            <input type="text" name="userName" id="userName" placeholder="请输入用户名" required>
+            <br>
+            密&nbsp;&nbsp;&nbsp;码：
+            <input type="password" name="passWord" id="passWord" placeholder="请输入密码" required>
+            <br>
+            手机号：
+            <input type="text" name="mobile" id="mobile" placeholder="请输入手机号" required>
+            <br>
+            <input type="submit" value="登录" id="submit">
+            <a href="http://127.0.0.1:8080/PHP_Work/regist.html">
+<!--                超链接路径使用wamp服务器的路径，PHP_Work为项目根目录-->
+<!--                127.0.0.1和localhost为一样的效果，都是指向主机-->
+                <input type="button" value="注册" id="Reg">
+            </a>
+
+            <a href="http://127.0.0.1:8080/PHP_Work/feedback.html">
+                <input type="button" value="反馈箱" id="FeedBack">
+            </a>
+
+        </form>
+
+
+    </div>
+
+</body>
+</html>

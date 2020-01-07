@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>意见箱</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <link rel="icon" href="img/bitbug_favicon.ico" type="image/x-icon">
+</head>
+<style>
+
+    #box{
+        width: 1000px;
+        height: 500px;
+        margin: 0 auto;
+        border: 1px solid lightgray;
+        background: url("img/bgImg02.png");
+        background-size: 1000px 500px;
+    }
+
+    input{
+        height: 40px;
+        margin-bottom: 20px;
+        width: 200px;
+        background-color: rgba(255,255,255,0.7);
+        border: 0px;
+    }
+    #submit,#ReSet,#Reg {
+        height: 25px;
+        width: 60px;
+        /*margin-left: 40px;*/
+    }
+    #submit{
+        margin-right: 20px;
+    }
+    form{
+        /*border: 1px solid lightgray;*/
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #box div{
+        margin-bottom: 40px;
+        /*line-height: 50px;*/
+        margin-top: 20px;
+    }
+
+    #box #head_Nav #nav_Img{
+        width: 50px;
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+
+    #box #feedback{
+        /*height: 300px;*/
+        float: left;
+        margin-left: -50px;
+        margin-top: 15px;
+        background-color: rgba(255,255,255,0.7);
+        margin-bottom: 15px;
+        resize: none;
+        /*margin-right: 80px;*/
+        /*margin-left: 20px;*/
+        }
+
+    #box #Reg{
+        margin-left: 23px;
+    }
+
+    #box #head_Nav #sp1{
+        display: block;
+        margin-left: 85px;
+        margin-top: -40px;
+    }
+
+    #box #head_Nav #sp2{
+        display: block;
+        margin-left: 100px;
+        margin-top: -40px;
+        /*color: hotpink;*/
+    }
+
+</style>
+<body>
+
+<div id="box">
+    <div id="head_Nav">
+        <img src="img/web.png" id="nav_Img">&nbsp;&nbsp;<span id="sp1">·</span>&nbsp;&nbsp;
+        <span id="sp2">意见反馈</span>
+    </div>
+
+    <form action="feedback.php" method="post">
+<!--        用户名和意见箱都是必填-->
+        用户名：
+        <input type="text" name="userName" id="userName" placeholder="请输入用户名" required>
+        <br>
+        意见箱：
+        <textarea id="feedback" name="feedback" rows="15" cols="60" placeholder="请写出您的建议" required></textarea>
+        <br>
+        <input type="submit" value="提交" id="submit">
+        <a href="http://127.0.0.1:8080/PHP_Work/regist.html">
+<!--                超链接路径使用wamp服务器的路径，PHP_Work为项目根目录-->
+<!--                127.0.0.1和localhost为一样的效果，都是指向主机-->
+            <input type="reset" value="重置" id="ReSet">
+<!--            重置所有的内容-->
+        </a>
+        <a href="http://127.0.0.1:8080/PHP_Work/index.html">
+            <!--                超链接路径使用wamp服务器的路径，PHP_Work为项目根目录-->
+            <!--                127.0.0.1和localhost为一样的效果，都是指向主机-->
+            <input type="button" value="返回" id="Reg">
+        </a>
+    </form>
+</div>
+
+</body>
+</html>
